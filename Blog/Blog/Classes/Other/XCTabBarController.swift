@@ -19,10 +19,11 @@ class XCTabBarController: UITabBarController {
 
     // 创建控制器
     func createControllers() {
+        
         // 主页
-        let home = XCHomeController()
-        home.title = "Home"
-        let homeNavi = UINavigationController(rootViewController: home);
+        createController(viewController: XCHomeController(), imageString: "", title: "Home")
+        
+
         
         // 消息
         let msg = XCMsgController()
@@ -37,10 +38,21 @@ class XCTabBarController: UITabBarController {
         me.title = "Me"
         let meNavi = UINavigationController(rootViewController: me)
         
-        viewControllers = [homeNavi, msgNavi, discoverNavi, meNavi]
+        
     }
     
-    
+    func createController(viewController:UIViewController, imageString:String, title:String) {
+        
+        // 设置标题
+        viewController.tabBarItem.title = title
+        
+        // 设置图片
+        viewController.tabBarItem.image = UIImage(named: imageString)
+        
+        let navi = UINavigationController()
+        
+        addChildViewController(navi)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -14,7 +14,6 @@
 		183040931D92E5F200EA22A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183040881D92E5F200EA22A7 /* AppDelegate.swift */; };
 		183040941D92E5F200EA22A7 /* XCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183040891D92E5F200EA22A7 /* XCTabBarController.swift */; };
 		183040951D92E5F200EA22A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1830408C1D92E5F200EA22A7 /* Assets.xcassets */; };
-		183040961D92E5F200EA22A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1830408D1D92E5F200EA22A7 /* LaunchScreen.storyboard */; };
 		226521AA4C36F6F8119DA5B1 /* Pods_Blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711E06F09C9E374BF4D2CDFD /* Pods_Blog.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		183040881D92E5F200EA22A7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		183040891D92E5F200EA22A7 /* XCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTabBarController.swift; sourceTree = "<group>"; };
 		1830408C1D92E5F200EA22A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1830408E1D92E5F200EA22A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		711E06F09C9E374BF4D2CDFD /* Pods_Blog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BBDF490203AE735F6F6784 /* Pods-Blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blog/Pods-Blog.release.xcconfig"; sourceTree = "<group>"; };
 		BCF9F2B00F7543B4DA0231C6 /* Pods-Blog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blog/Pods-Blog.debug.xcconfig"; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				1830408C1D92E5F200EA22A7 /* Assets.xcassets */,
-				1830408D1D92E5F200EA22A7 /* LaunchScreen.storyboard */,
 				1830406C1D92E55400EA22A7 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -322,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				183040951D92E5F200EA22A7 /* Assets.xcassets in Resources */,
-				183040961D92E5F200EA22A7 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,17 +387,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		1830408D1D92E5F200EA22A7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1830408E1D92E5F200EA22A7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1830406D1D92E55400EA22A7 /* Debug */ = {
@@ -500,6 +485,7 @@
 			baseConfigurationReference = BCF9F2B00F7543B4DA0231C6 /* Pods-Blog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = F37C3YGXEL;
 				INFOPLIST_FILE = Blog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -514,6 +500,7 @@
 			baseConfigurationReference = 98BBDF490203AE735F6F6784 /* Pods-Blog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = F37C3YGXEL;
 				INFOPLIST_FILE = Blog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
