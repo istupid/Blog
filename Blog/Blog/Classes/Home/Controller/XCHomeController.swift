@@ -8,28 +8,23 @@
 
 import UIKit
 
-class XCHomeController: UIViewController {
+class XCHomeController: XCBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "navigationbar_pop", target: self, action: #selector(push))
+        
+        loginView.LoginView(title: "关注一些人，有惊喜")
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @objc private func push() {
+        
+        let temp = UIViewController()
+        
+        temp.hidesBottomBarWhenPushed = true
+        
+        navigationController?.pushViewController(temp, animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

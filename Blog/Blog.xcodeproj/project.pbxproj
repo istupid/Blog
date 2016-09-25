@@ -7,17 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1804690D1D93F16C00B1CEFE /* XCTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1804690C1D93F16C00B1CEFE /* XCTabBar.swift */; };
+		180469111D93FFF700B1CEFE /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180469101D93FFF700B1CEFE /* UIView+Extension.swift */; };
+		180469131D94036400B1CEFE /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180469121D94036400B1CEFE /* UIBarButtonItem+Extension.swift */; };
+		180469151D94095200B1CEFE /* XCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180469141D94095200B1CEFE /* XCNavigationController.swift */; };
+		180469191D9411FD00B1CEFE /* XCSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180469181D9411FD00B1CEFE /* XCSearchView.swift */; };
+		1804691B1D9412FD00B1CEFE /* XCSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1804691A1D9412FD00B1CEFE /* XCSearchView.xib */; };
+		1804691D1D94288900B1CEFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1804691C1D94288900B1CEFE /* Assets.xcassets */; };
 		1830408F1D92E5F200EA22A7 /* XCDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183040751D92E5F200EA22A7 /* XCDiscoverController.swift */; };
 		183040901D92E5F200EA22A7 /* XCHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830407A1D92E5F200EA22A7 /* XCHomeController.swift */; };
 		183040911D92E5F200EA22A7 /* XCMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830407F1D92E5F200EA22A7 /* XCMeController.swift */; };
 		183040921D92E5F200EA22A7 /* XCMsgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183040841D92E5F200EA22A7 /* XCMsgController.swift */; };
 		183040931D92E5F200EA22A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183040881D92E5F200EA22A7 /* AppDelegate.swift */; };
 		183040941D92E5F200EA22A7 /* XCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183040891D92E5F200EA22A7 /* XCTabBarController.swift */; };
-		183040951D92E5F200EA22A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1830408C1D92E5F200EA22A7 /* Assets.xcassets */; };
+		18FC12201D94CCE10097D268 /* XCLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC121F1D94CCE10097D268 /* XCLoginView.swift */; };
+		18FC12221D94D80E0097D268 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC12211D94D80E0097D268 /* UILabel+Extension.swift */; };
+		18FC12241D94D8740097D268 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC12231D94D8740097D268 /* UIButton+Extension.swift */; };
+		18FC12261D94EB6B0097D268 /* XCBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC12251D94EB6B0097D268 /* XCBaseController.swift */; };
 		226521AA4C36F6F8119DA5B1 /* Pods_Blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711E06F09C9E374BF4D2CDFD /* Pods_Blog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1804690C1D93F16C00B1CEFE /* XCTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTabBar.swift; sourceTree = "<group>"; };
+		180469101D93FFF700B1CEFE /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		180469121D94036400B1CEFE /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		180469141D94095200B1CEFE /* XCNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCNavigationController.swift; sourceTree = "<group>"; };
+		180469181D9411FD00B1CEFE /* XCSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSearchView.swift; sourceTree = "<group>"; };
+		1804691A1D9412FD00B1CEFE /* XCSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCSearchView.xib; sourceTree = "<group>"; };
+		1804691C1D94288900B1CEFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1830405D1D92E55400EA22A7 /* Blog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1830406C1D92E55400EA22A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		183040751D92E5F200EA22A7 /* XCDiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCDiscoverController.swift; sourceTree = "<group>"; };
@@ -25,8 +42,11 @@
 		1830407F1D92E5F200EA22A7 /* XCMeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCMeController.swift; sourceTree = "<group>"; };
 		183040841D92E5F200EA22A7 /* XCMsgController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCMsgController.swift; sourceTree = "<group>"; };
 		183040881D92E5F200EA22A7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		183040891D92E5F200EA22A7 /* XCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTabBarController.swift; sourceTree = "<group>"; };
-		1830408C1D92E5F200EA22A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		183040891D92E5F200EA22A7 /* XCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XCTabBarController.swift; path = ../../Other/XCTabBarController.swift; sourceTree = "<group>"; };
+		18FC121F1D94CCE10097D268 /* XCLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCLoginView.swift; sourceTree = "<group>"; };
+		18FC12211D94D80E0097D268 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		18FC12231D94D8740097D268 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		18FC12251D94EB6B0097D268 /* XCBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCBaseController.swift; sourceTree = "<group>"; };
 		711E06F09C9E374BF4D2CDFD /* Pods_Blog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BBDF490203AE735F6F6784 /* Pods-Blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog.release.xcconfig"; path = "Pods/Target Support Files/Pods-Blog/Pods-Blog.release.xcconfig"; sourceTree = "<group>"; };
 		BCF9F2B00F7543B4DA0231C6 /* Pods-Blog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Blog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Blog/Pods-Blog.debug.xcconfig"; sourceTree = "<group>"; };
@@ -44,6 +64,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180469091D93EFD100B1CEFE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1804690E1D93FA3E00B1CEFE /* Model */,
+				1804690B1D93F13800B1CEFE /* View */,
+				1804690A1D93F11600B1CEFE /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1804690A1D93F11600B1CEFE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				183040891D92E5F200EA22A7 /* XCTabBarController.swift */,
+				180469141D94095200B1CEFE /* XCNavigationController.swift */,
+				18FC12251D94EB6B0097D268 /* XCBaseController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1804690B1D93F13800B1CEFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1804690C1D93F16C00B1CEFE /* XCTabBar.swift */,
+				18FC121F1D94CCE10097D268 /* XCLoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1804690E1D93FA3E00B1CEFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1804690F1D93FFB500B1CEFE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				180469101D93FFF700B1CEFE /* UIView+Extension.swift */,
+				180469121D94036400B1CEFE /* UIBarButtonItem+Extension.swift */,
+				18FC12211D94D80E0097D268 /* UILabel+Extension.swift */,
+				18FC12231D94D8740097D268 /* UIButton+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		183040541D92E55400EA22A7 = {
 			isa = PBXGroup;
 			children = (
@@ -74,8 +141,9 @@
 		183040721D92E5F200EA22A7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				183040731D92E5F200EA22A7 /* Discover */,
+				180469091D93EFD100B1CEFE /* Main */,
 				183040781D92E5F200EA22A7 /* Home */,
+				183040731D92E5F200EA22A7 /* Discover */,
 				1830407D1D92E5F200EA22A7 /* Me */,
 				183040821D92E5F200EA22A7 /* Message */,
 				183040871D92E5F200EA22A7 /* Other */,
@@ -112,6 +180,8 @@
 		183040771D92E5F200EA22A7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				180469181D9411FD00B1CEFE /* XCSearchView.swift */,
+				1804691A1D9412FD00B1CEFE /* XCSearchView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,7 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				183040881D92E5F200EA22A7 /* AppDelegate.swift */,
-				183040891D92E5F200EA22A7 /* XCTabBarController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -224,6 +293,7 @@
 		1830408A1D92E5F200EA22A7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1804690F1D93FFB500B1CEFE /* Extension */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -231,7 +301,7 @@
 		1830408B1D92E5F200EA22A7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1830408C1D92E5F200EA22A7 /* Assets.xcassets */,
+				1804691C1D94288900B1CEFE /* Assets.xcassets */,
 				1830406C1D92E55400EA22A7 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -291,6 +361,7 @@
 					1830405C1D92E55400EA22A7 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = F37C3YGXEL;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -318,7 +389,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				183040951D92E5F200EA22A7 /* Assets.xcassets in Resources */,
+				1804691D1D94288900B1CEFE /* Assets.xcassets in Resources */,
+				1804691B1D9412FD00B1CEFE /* XCSearchView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,11 +450,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				183040911D92E5F200EA22A7 /* XCMeController.swift in Sources */,
+				180469191D9411FD00B1CEFE /* XCSearchView.swift in Sources */,
 				1830408F1D92E5F200EA22A7 /* XCDiscoverController.swift in Sources */,
+				18FC12261D94EB6B0097D268 /* XCBaseController.swift in Sources */,
+				180469111D93FFF700B1CEFE /* UIView+Extension.swift in Sources */,
 				183040921D92E5F200EA22A7 /* XCMsgController.swift in Sources */,
 				183040931D92E5F200EA22A7 /* AppDelegate.swift in Sources */,
 				183040941D92E5F200EA22A7 /* XCTabBarController.swift in Sources */,
+				180469151D94095200B1CEFE /* XCNavigationController.swift in Sources */,
+				1804690D1D93F16C00B1CEFE /* XCTabBar.swift in Sources */,
+				180469131D94036400B1CEFE /* UIBarButtonItem+Extension.swift in Sources */,
 				183040901D92E5F200EA22A7 /* XCHomeController.swift in Sources */,
+				18FC12221D94D80E0097D268 /* UILabel+Extension.swift in Sources */,
+				18FC12201D94CCE10097D268 /* XCLoginView.swift in Sources */,
+				18FC12241D94D8740097D268 /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +488,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -456,6 +538,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -484,14 +567,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BCF9F2B00F7543B4DA0231C6 /* Pods-Blog.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F37C3YGXEL;
 				INFOPLIST_FILE = Blog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.william.Blog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -499,14 +586,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 98BBDF490203AE735F6F6784 /* Pods-Blog.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = F37C3YGXEL;
 				INFOPLIST_FILE = Blog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.william.Blog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

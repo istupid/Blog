@@ -13,61 +13,56 @@ class XCTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // 自定义TabBar
+        let tabBar = XCTabBar()
+        setValue(tabBar, forKey: "tabBar")
+        
+        tabBar.composeClickClosure = { [weak self] in
+            
+            print("接口未写"+"\(self)")
+        }
+        
         // 创建tabbar
         createControllers()
+        
     }
 
-    // 创建控制器
+    // TODO: 创建控制器
     func createControllers() {
         
         // 主页
-        createController(viewController: XCHomeController(), imageString: "", title: "Home")
-        
-
+        createController(viewController: XCHomeController(), imageString: "tabbar_home", title: "Home")
         
         // 消息
-        let msg = XCMsgController()
-        msg.title = "Message"
-        let msgNavi = UINavigationController(rootViewController: msg)
+        createController(viewController: XCMsgController(), imageString: "tabbar_message_center", title: "Message")
         
         // 发现
-        let discover = XCDiscoverController()
-        let discoverNavi = UINavigationController(rootViewController: discover)
+        createController(viewController: XCDiscoverController(), imageString: "tabbar_discover", title: "Discover")
         
-        let me = XCMeController()
-        me.title = "Me"
-        let meNavi = UINavigationController(rootViewController: me)
-        
+        // 自己
+        createController(viewController: XCMeController(), imageString: "tabbar_profile", title: "Me")
         
     }
     
+    // MARK: 添加控制器
     func createController(viewController:UIViewController, imageString:String, title:String) {
         
         // 设置标题
         viewController.tabBarItem.title = title
+        viewController.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.orange], for: .selected)
+        // 字体大小
+        viewController.tabBarItem.setTitleTextAttributes([NSFontAttributeName : UIFont.systemFont(ofSize: 12)], for: .normal)
         
         // 设置图片
         viewController.tabBarItem.image = UIImage(named: imageString)
+        viewController.tabBarItem.selectedImage = UIImage(named: imageString+"_selected")?.withRenderingMode(.alwaysOriginal)
         
-        let navi = UINavigationController()
+        viewController.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -2)
+        
+        
+        let navi = XCNavigationController(rootViewController: viewController)
         
         addChildViewController(navi)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
