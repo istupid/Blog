@@ -20,6 +20,10 @@
 		183040921D92E5F200EA22A7 /* XCMsgController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183040841D92E5F200EA22A7 /* XCMsgController.swift */; };
 		183040931D92E5F200EA22A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183040881D92E5F200EA22A7 /* AppDelegate.swift */; };
 		183040941D92E5F200EA22A7 /* XCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183040891D92E5F200EA22A7 /* XCTabBarController.swift */; };
+		18A2ABB81D97896500E4602B /* XCOAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2ABB71D97896500E4602B /* XCOAuthController.swift */; };
+		18A2ABBA1D97912F00E4602B /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2ABB91D97912F00E4602B /* Common.swift */; };
+		18A2ABBC1D97B63300E4602B /* XCNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2ABBB1D97B63300E4602B /* XCNetworkTools.swift */; };
+		18A2ABBF1D97E7C000E4602B /* XCUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2ABBE1D97E7C000E4602B /* XCUserAccount.swift */; };
 		18FC12201D94CCE10097D268 /* XCLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC121F1D94CCE10097D268 /* XCLoginView.swift */; };
 		18FC12221D94D80E0097D268 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC12211D94D80E0097D268 /* UILabel+Extension.swift */; };
 		18FC12241D94D8740097D268 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC12231D94D8740097D268 /* UIButton+Extension.swift */; };
@@ -43,6 +47,10 @@
 		183040841D92E5F200EA22A7 /* XCMsgController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCMsgController.swift; sourceTree = "<group>"; };
 		183040881D92E5F200EA22A7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		183040891D92E5F200EA22A7 /* XCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XCTabBarController.swift; path = ../../Other/XCTabBarController.swift; sourceTree = "<group>"; };
+		18A2ABB71D97896500E4602B /* XCOAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCOAuthController.swift; sourceTree = "<group>"; };
+		18A2ABB91D97912F00E4602B /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		18A2ABBB1D97B63300E4602B /* XCNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCNetworkTools.swift; sourceTree = "<group>"; };
+		18A2ABBE1D97E7C000E4602B /* XCUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCUserAccount.swift; sourceTree = "<group>"; };
 		18FC121F1D94CCE10097D268 /* XCLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCLoginView.swift; sourceTree = "<group>"; };
 		18FC12211D94D80E0097D268 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		18FC12231D94D8740097D268 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
@@ -141,6 +149,7 @@
 		183040721D92E5F200EA22A7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				18A2ABB51D9788EC00E4602B /* OAuth */,
 				180469091D93EFD100B1CEFE /* Main */,
 				183040781D92E5F200EA22A7 /* Home */,
 				183040731D92E5F200EA22A7 /* Discover */,
@@ -294,6 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				1804690F1D93FFB500B1CEFE /* Extension */,
+				18A2ABB91D97912F00E4602B /* Common.swift */,
+				18A2ABBB1D97B63300E4602B /* XCNetworkTools.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -305,6 +316,31 @@
 				1830406C1D92E55400EA22A7 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18A2ABB51D9788EC00E4602B /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				18A2ABBD1D97E6F400E4602B /* Model */,
+				18A2ABB61D97891B00E4602B /* Controller */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		18A2ABB61D97891B00E4602B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18A2ABB71D97896500E4602B /* XCOAuthController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18A2ABBD1D97E6F400E4602B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18A2ABBE1D97E7C000E4602B /* XCUserAccount.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7EA8536320C6901FA6244843 /* Frameworks */ = {
@@ -449,8 +485,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A2ABBA1D97912F00E4602B /* Common.swift in Sources */,
 				183040911D92E5F200EA22A7 /* XCMeController.swift in Sources */,
 				180469191D9411FD00B1CEFE /* XCSearchView.swift in Sources */,
+				18A2ABB81D97896500E4602B /* XCOAuthController.swift in Sources */,
 				1830408F1D92E5F200EA22A7 /* XCDiscoverController.swift in Sources */,
 				18FC12261D94EB6B0097D268 /* XCBaseController.swift in Sources */,
 				180469111D93FFF700B1CEFE /* UIView+Extension.swift in Sources */,
@@ -460,8 +498,10 @@
 				180469151D94095200B1CEFE /* XCNavigationController.swift in Sources */,
 				1804690D1D93F16C00B1CEFE /* XCTabBar.swift in Sources */,
 				180469131D94036400B1CEFE /* UIBarButtonItem+Extension.swift in Sources */,
+				18A2ABBF1D97E7C000E4602B /* XCUserAccount.swift in Sources */,
 				183040901D92E5F200EA22A7 /* XCHomeController.swift in Sources */,
 				18FC12221D94D80E0097D268 /* UILabel+Extension.swift in Sources */,
+				18A2ABBC1D97B63300E4602B /* XCNetworkTools.swift in Sources */,
 				18FC12201D94CCE10097D268 /* XCLoginView.swift in Sources */,
 				18FC12241D94D8740097D268 /* UIButton+Extension.swift in Sources */,
 			);

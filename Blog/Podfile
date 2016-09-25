@@ -8,5 +8,8 @@ target 'Blog' do
   # Pods for Blog
 
   pod 'SnapKit', '~> 3.0'
+  pod 'SVProgressHUD'
+  pod 'SDWebImage'
+  pod 'AFNetworking'
 
 end

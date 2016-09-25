@@ -34,7 +34,9 @@ class XCBaseController: UIViewController, XCLoginViewDelegate {
     }
     
     func userWillLogin() {
-        print("登录接口")
+        
+        // 跳转到认证页面
+        present(UINavigationController(rootViewController:XCOAuthController()), animated: true, completion: nil)
     }
     
     func userWillRegister() {
