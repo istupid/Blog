@@ -11,8 +11,6 @@ import SVProgressHUD
 
 
 class XCOAuthController: UIViewController {
-
-    let path = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as NSString).appendingPathComponent("account.plist")
     
     lazy var webView: UIWebView = {
         
@@ -50,8 +48,6 @@ class XCOAuthController: UIViewController {
         let reuqest = URLRequest(url: URL(string: urlString)!)
         
         webView.loadRequest(reuqest)
-        
-//        loadAccessToken()
     }
 
     @objc private func close() {
@@ -89,73 +85,23 @@ extension XCOAuthController: UIWebViewDelegate {
             // 方法选错to,错误
             let code = (query as NSString).substring(from: flag.characters.count)
             
-            loadAccessToken(code: code)
+            // viewmodel 加载数据
+            XCUserAccountViewModel.sharedAccountViewModel.loadAccessToken(code: code, finished: {(success) in
+                
+                if !success {
+                    SVProgressHUD.showError(withStatus: errorTip)
+                    return
+                }
+                SVProgressHUD.dismiss()
+//                // 回到主页面（不是home）
+//                self.dismiss(animated: true, completion: nil)
+                NotificationCenter.default.post(name: NSNotification.Name(KchangeRootViewController), object: "Welcome")
+                
+            })
             
             return false
         }
         
         return true
-    }
-    
-    internal func loadAccessToken(code: String) {
-        
-        let urlString = "https://api.weibo.com/oauth2/access_token"
-        let parameters = ["client_id":client_id,
-                          "client_secret":client_secret,
-                          "grant_type":"authorization_code",
-                          "code":code,
-                          "redirect_uri":redirect_uri]
-        
-        // 请求方法GET报错
-        XCNetworkTools.sharedTools.request(method: .POST, urlString: urlString, parameters: parameters) { (responseObject, error) in
-            
-            if error != nil {
-                return
-            }
-            
-            // 请求用户信息
-            self.loadUserInfo(dict: responseObject as! [String : Any])
-//            print(responseObject!)
-        }
-    }
-    
-    internal func loadUserInfo(dict:[String : Any]) {
-        
-        let urlString = "https://api.weibo.com/2/users/show.json"
-        
-        let parameters = ["access_token":dict["access_token"]!,
-                          "uid":dict["uid"]!]
-        
-        XCNetworkTools.sharedTools.request(method: .GET, urlString: urlString, parameters: parameters) { (responseObject, error) in
-            
-            if error != nil {
-                return
-            }
-            
-            // 获取用户信息，将字典类型转换为模型
-            var userInfoDict = responseObject as! [String : Any]
-            
-            for keyValues in dict {
-                userInfoDict[keyValues.key] = keyValues.value
-            }
-            
-//            print(userInfoDict)
-            
-            // 字典转模型
-            let userAccount = XCUserAccount(dict: userInfoDict)
-            print(userAccount)
-            
-            // 模型数据存储到本地
-            self.saveUserAccount(userAccount: userAccount)
-        }
-    }
-    
-    // MARK: 通过归档存储数据
-    private func saveUserAccount(userAccount: XCUserAccount) {
-        
-        NSKeyedArchiver.archiveRootObject(userAccount, toFile: path)
-        
-        // 答应保存的路径
-        print(path)
     }
 }

@@ -13,3 +13,8 @@ let client_id = "3424717392"
 let client_secret = "0f51b13762d958f7e8c5e2f7e8268920"
 let redirect_uri = "https://github.com/GodWilliam/"
 
+let KchangeRootViewController = "KchangeRootViewController"
+
+let errorTip = "世界上最遥远的距离就是没有网络"
+
+

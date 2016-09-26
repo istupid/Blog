@@ -10,7 +10,7 @@ import UIKit
 
 class XCBaseController: UIViewController, XCLoginViewDelegate {
 
-    var userlogin = false
+    var userlogin = XCUserAccountViewModel.sharedAccountViewModel.userLogin
     
     lazy var loginView : XCLoginView = XCLoginView()
     
@@ -45,8 +45,6 @@ class XCBaseController: UIViewController, XCLoginViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
 
    

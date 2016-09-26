@@ -11,5 +11,6 @@ target 'Blog' do
   pod 'SVProgressHUD'
   pod 'SDWebImage'
   pod 'AFNetworking'
+  pod 'YYModel'
 
 end
