@@ -18,11 +18,11 @@ class XCStatus: NSObject {
     
     var source: String? // 来源
     
-    init(dict: [String : Any]) {
-        super.init()
-        setValuesForKeys(dict)
-    }
+//    init(dict: [String : Any]) {
+//        super.init()
+//        setValuesForKeys(dict)
+//    }
     
-    override func setValue(_ value: Any?, forUndefinedKey key: String) { }
+//    override func setValue(_ value: Any?, forUndefinedKey key: String) { }
 
 }

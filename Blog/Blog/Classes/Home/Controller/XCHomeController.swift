@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import YYModel
 
 class XCHomeController: XCBaseController {
 
@@ -69,11 +70,28 @@ class XCHomeController: XCBaseController {
                 return
             }
             
-            // 遍历字典转模型
+            // json数据转换为模型数组
+            // 2 MVC模型下推荐使用，如果使用MVVM方式不建议使用
+            /*
+            let tempArray = NSArray.yy_modelArray(with: XCStatus.self, json: array) as! [XCStatus]
+            
+            self.statuses = tempArray;
+            */
+            
+            for item in array {
+                
+                let status = XCStatus()
+                status.yy_modelSet(with: item)
+                self.statuses.append(status)
+            }
+ 
+            // 1 自己写字典转模型数组，不使用框架
+            /*
             for item in array {
                 let status = XCStatus(dict: item)
                 self.statuses.append(status)
             }
+            */
             
             self.tableView.reloadData()
         }
