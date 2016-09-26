@@ -14,6 +14,9 @@ class XCHomeController: XCBaseController {
 
     lazy var statuses: [XCStatus] = [XCStatus]()
     
+    // 视图控制器视图数据源
+    lazy var viewModel: XCHomeViewModel = XCHomeViewModel()
+    
     private lazy var tableView: UITableView = {
         
         let tableView = UITableView(frame: self.view.bounds, style: .plain)
@@ -35,7 +38,14 @@ class XCHomeController: XCBaseController {
         
         self.view.addSubview(tableView)
         
-        loadData()
+//        loadData()
+        viewModel.loadData { (success) in
+            if !success {
+                SVProgressHUD.showError(withStatus: errorTip)
+                return
+            }
+            self.tableView.reloadData()
+        }
         
     }
 
@@ -105,12 +115,12 @@ class XCHomeController: XCBaseController {
 extension XCHomeController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statuses.count
+        return viewModel.viewModelArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = statuses[indexPath.row].text
+        cell.textLabel?.text = viewModel.viewModelArray[indexPath.row].status?.text
         return cell
     }
 }
