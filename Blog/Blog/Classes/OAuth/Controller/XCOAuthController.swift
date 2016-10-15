@@ -59,6 +59,10 @@ class XCOAuthController: UIViewController {
         let jsString = "document.getElementById('userId').value = 'mr_xiongchun@sina.com',document.getElementById('passwd').value = '130480519dq'"
         webView.stringByEvaluatingJavaScript(from: jsString)
     }
+    
+    deinit {
+        print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&OAuth释放")
+    }
 }
 
 extension XCOAuthController: UIWebViewDelegate {

@@ -8,12 +8,17 @@
 
 import UIKit
 
-class XCNavigationController: UINavigationController {
+class XCNavigationController: UINavigationController, UIGestureRecognizerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.interactivePopGestureRecognizer?.delegate = self // 解决手势问题
+    }
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return childViewControllers.count != 1
     }
 
     // TODO: 重写Push方法

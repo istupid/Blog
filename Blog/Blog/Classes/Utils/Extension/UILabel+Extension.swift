@@ -13,7 +13,7 @@ extension UILabel {
     // TODO: 便利构造函数
     convenience init(text: String, textColor: UIColor, fontSize: CGFloat) {
         
-        self.init();
+        self.init()
         
         self.text = text
         
@@ -24,6 +24,24 @@ extension UILabel {
         self.textAlignment = .center
         
         sizeToFit()
+    }
+    
+    // TODO: 自动约束使用
+    convenience init(text: String = "",
+                     textColor: UIColor = UIColor.black,
+                     fontSize: CGFloat = 14,
+                     lines: Int = 1)
+    {
+        self.init()
+        
+        self.text = text
+        
+        self.textColor = textColor
+        
+        self.numberOfLines = lines
+        
+        self.font = UIFont.systemFont(ofSize: fontSize)
+        
     }
 
 }

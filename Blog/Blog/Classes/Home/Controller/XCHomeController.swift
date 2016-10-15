@@ -10,117 +10,168 @@ import UIKit
 import SVProgressHUD
 import YYModel
 
+private let cellId = "XCStatusCell"
+
 class XCHomeController: XCBaseController {
 
     lazy var statuses: [XCStatus] = [XCStatus]()
     
     // 视图控制器视图数据源
-    lazy var viewModel: XCHomeViewModel = XCHomeViewModel()
+    lazy var homeViewModel: XCHomeViewModel = XCHomeViewModel()
     
-    private lazy var tableView: UITableView = {
+    lazy var tableView: UITableView = {
         
-        let tableView = UITableView(frame: self.view.bounds, style: .plain)
+        let tableView: UITableView = UITableView(frame: self.view.bounds, style: .plain)
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 200
+        
+        tableView.separatorStyle = .none // 分割线
+        
+//        tableView.addSubview(self.refreshControl) // 下拉刷新
+        
+        tableView.tableFooterView = self.indicatorView // 上拉刷新
         
         tableView.dataSource = self
         tableView.delegate = self
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier:"cell")
+        tableView.register(XCStatusCell.self, forCellReuseIdentifier: cellId)
         
         return tableView
     }()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        if !userlogin {
+            
+            loginView.LoginView(title: "关注一些人，有惊喜")
+            
+            return
+        }
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "navigationbar_pop", target: self, action: #selector(push))
         
-        loginView.LoginView(title: "关注一些人，有惊喜")
-        
         self.view.addSubview(tableView)
         
-//        loadData()
-        viewModel.loadData { (success) in
+        self.navigationController?.view.addSubview(self.tipLabel)
+        self.navigationController?.view.insertSubview(self.tipLabel, belowSubview: self.navigationController!.navigationBar)
+        
+        tableView.addSubview(refresh)
+        
+        loadData()
+    }
+    
+    internal func loadData() {
+        
+        homeViewModel.loadData(isPullUp: indicatorView.isAnimating) { (success, count) in
             if !success {
                 SVProgressHUD.showError(withStatus: errorTip)
                 return
             }
+            self.refreshControl.endRefreshing() // 结束刷新
+            
+//            self.refresh.refreshStatue = .Normal
+            
+            self.refresh.stopAnimation()
+            
+            if !self.indicatorView.isAnimating {
+                
+                self.startTipAnimation(count: count)
+            }
+            self.indicatorView.stopAnimating() // 加载完成就停止小菊花
+            
             self.tableView.reloadData()
         }
-        
     }
 
     @objc private func push() {
-        
         let temp = UIViewController()
-        
         temp.hidesBottomBarWhenPushed = true
-        
         navigationController?.pushViewController(temp, animated: true)
     }
     
-    // TODO: 家族数据
-    @objc private func loadData() {
-        
-        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
-        
-        let parameters = ["access_token" : XCUserAccountViewModel.sharedAccountViewModel.userAccount?.access_token ?? ""]
-        
-        XCNetworkTools.sharedTools.request(method: .GET, urlString: urlString, parameters: parameters) { (responseObject, error) in
-            
-            if error != nil {
-                SVProgressHUD.showError(withStatus: errorTip)
-                return
-            }
-            
-            // 解析数据
-            let dict = responseObject as! [String:Any]
-            
-            // 取出statuses
-            guard let array = dict["statuses"] as? [[String : Any]] else {
-                return
-            }
-            
-            // json数据转换为模型数组
-            // 2 MVC模型下推荐使用，如果使用MVVM方式不建议使用
-            /*
-            let tempArray = NSArray.yy_modelArray(with: XCStatus.self, json: array) as! [XCStatus]
-            
-            self.statuses = tempArray;
-            */
-            
-            for item in array {
-                
-                let status = XCStatus()
-                status.yy_modelSet(with: item)
-                self.statuses.append(status)
-            }
- 
-            // 1 自己写字典转模型数组，不使用框架
-            /*
-            for item in array {
-                let status = XCStatus(dict: item)
-                self.statuses.append(status)
-            }
-            */
-            
-            self.tableView.reloadData()
-        }
+    // TODO: 下拉自定义
+    internal lazy var refresh: XCRefreshControl = {
+        let refresh = XCRefreshControl()
+        refresh.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        return refresh
+    }()
     
+    // TODO: 下拉提示
+    internal lazy var tipLabel: UILabel = {
+        let tip = UILabel(textColor: UIColor.white, fontSize: 14)
+        tip.backgroundColor = UIColor.orange
+        tip.textAlignment = .center
+        tip.frame = CGRect(x: 0, y: maxNavY - 35, width: kScreenW, height: 35)
+//        tip.alpha = 0
+        tip.isHidden = true
+        return tip
+    }()
+    
+    private func startTipAnimation(count: Int) {
+        
+        self.tipLabel.text = count == 0 ? "没有新博客数据" : "有\(count)条新博客数据"
+        
+        self.tipLabel.isHidden = false
+        
+        let lastY = self.tipLabel.frame.origin.y
+        UIView.animate(withDuration: 1, animations: { 
+            self.tipLabel.frame.origin.y = maxNavY
+            }) { (_) in
+                UIView.animate(withDuration: 1, delay: 0, options: [], animations: {
+                    self.tipLabel.frame.origin.y = lastY
+                    }, completion: { (_) in
+                        self.tipLabel.isHidden = true;
+                })
+        }
+        
     }
+    
+    // TODO: 下拉刷新
+    internal lazy var refreshControl: UIRefreshControl = {
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        return refresh
+    }()
+    
+    // TODO: 上拉刷新
+    internal lazy var indicatorView: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        return indicator
+    }()
+    
 }
-
 
 // TODO: 遵守协议
 
 extension XCHomeController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.viewModelArray.count
+        return homeViewModel.viewModelArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = viewModel.viewModelArray[indexPath.row].status?.text
+        
+//        print(indexPath.row)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! XCStatusCell
+//        print("----"+"\(cell)")
+        cell.statusViewModel = homeViewModel.viewModelArray[indexPath.row]
+        
         return cell
+    }
+    
+    // 加载跟多数据
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+        if (indexPath.row == homeViewModel.viewModelArray.count - 2) && indicatorView.isAnimating == false {
+            
+            indicatorView.startAnimating()
+            
+            loadData()
+        }
     }
 }

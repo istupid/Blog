@@ -24,4 +24,10 @@ extension UIButton {
         sizeToFit()
     }
 
+    convenience init(imageString: String, title: String, titleColor: UIColor, fontSize: CGFloat) {
+        
+        self.init(title: title, titleColor: titleColor, fontSize: fontSize)
+        
+        setImage(UIImage(named: imageString), for: .normal)
+    }
 }

@@ -17,19 +17,14 @@ class XCBaseController: UIViewController, XCLoginViewDelegate {
     override func loadView() {
         
         if userlogin {
-            
             super.loadView()
-            
         } else {
-        
             setLoginView()
         }
     }
     
     private func setLoginView() {
-        
         view = loginView
-        
         loginView.delegate = self
     }
     

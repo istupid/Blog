@@ -12,5 +12,8 @@ target 'Blog' do
   pod 'SDWebImage'
   pod 'AFNetworking'
   pod 'YYModel'
+  
+  pod 'pop'
+  pod 'YYText'
 
 end

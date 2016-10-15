@@ -14,6 +14,18 @@
 		180469191D9411FD00B1CEFE /* XCSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180469181D9411FD00B1CEFE /* XCSearchView.swift */; };
 		1804691B1D9412FD00B1CEFE /* XCSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1804691A1D9412FD00B1CEFE /* XCSearchView.xib */; };
 		1804691D1D94288900B1CEFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1804691C1D94288900B1CEFE /* Assets.xcassets */; };
+		1806EE2C1DA669BF00A26D7C /* XCComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806EE2B1DA669BF00A26D7C /* XCComposeView.swift */; };
+		1806EE2E1DA673DE00A26D7C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806EE2D1DA673DE00A26D7C /* UIImage+Extension.swift */; };
+		1806EE321DA67C6400A26D7C /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 1806EE311DA67C6400A26D7C /* UIImage+ImageEffects.m */; };
+		1806EE351DA68C7300A26D7C /* XCComposeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806EE341DA68C7300A26D7C /* XCComposeButton.swift */; };
+		1806EE381DA6AD6600A26D7C /* XCComposeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806EE371DA6AD6600A26D7C /* XCComposeController.swift */; };
+		1806EE3B1DA7C03500A26D7C /* XCPicSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806EE3A1DA7C03500A26D7C /* XCPicSelectViewController.swift */; };
+		1806EE3D1DA9C79000A26D7C /* XCEmoticonKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806EE3C1DA9C79000A26D7C /* XCEmoticonKeyboardView.swift */; };
+		1806EE3F1DA9D01D00A26D7C /* XCEmotionToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806EE3E1DA9D01D00A26D7C /* XCEmotionToolBar.swift */; };
+		1806EE411DA9E61100A26D7C /* XCEmotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806EE401DA9E61100A26D7C /* XCEmotionCell.swift */; };
+		1806EE441DA9F60900A26D7C /* XCEmotionTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806EE431DA9F60900A26D7C /* XCEmotionTools.swift */; };
+		1806EE461DA9F61800A26D7C /* XCEmotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1806EE451DA9F61800A26D7C /* XCEmotion.swift */; };
+		1806EE481DA9F6D600A26D7C /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1806EE471DA9F6D600A26D7C /* Emoticons.bundle */; };
 		1830408F1D92E5F200EA22A7 /* XCDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183040751D92E5F200EA22A7 /* XCDiscoverController.swift */; };
 		183040901D92E5F200EA22A7 /* XCHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830407A1D92E5F200EA22A7 /* XCHomeController.swift */; };
 		183040911D92E5F200EA22A7 /* XCMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830407F1D92E5F200EA22A7 /* XCMeController.swift */; };
@@ -22,6 +34,11 @@
 		183040941D92E5F200EA22A7 /* XCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183040891D92E5F200EA22A7 /* XCTabBarController.swift */; };
 		1863AEBE1D99177D00F79F5A /* XCStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863AEBD1D99177D00F79F5A /* XCStatusViewModel.swift */; };
 		1863AEC01D99181200F79F5A /* XCHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863AEBF1D99181200F79F5A /* XCHomeViewModel.swift */; };
+		1863AEC21D994B2400F79F5A /* XCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863AEC11D994B2400F79F5A /* XCUser.swift */; };
+		1863AEC41D994CCC00F79F5A /* XCStatusPictureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863AEC31D994CCC00F79F5A /* XCStatusPictureInfo.swift */; };
+		1863AEC61D99522400F79F5A /* XCStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863AEC51D99522400F79F5A /* XCStatusCell.swift */; };
+		1863AEC81D995AAE00F79F5A /* XCPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863AEC71D995AAE00F79F5A /* XCPictureView.swift */; };
+		1863AECA1D9B723200F79F5A /* XCToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1863AEC91D9B723200F79F5A /* XCToolBarView.swift */; };
 		18A2ABB81D97896500E4602B /* XCOAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2ABB71D97896500E4602B /* XCOAuthController.swift */; };
 		18A2ABBA1D97912F00E4602B /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2ABB91D97912F00E4602B /* Common.swift */; };
 		18A2ABBC1D97B63300E4602B /* XCNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2ABBB1D97B63300E4602B /* XCNetworkTools.swift */; };
@@ -29,6 +46,13 @@
 		18A2ABC21D97F30600E4602B /* XCUserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2ABC11D97F30600E4602B /* XCUserAccountViewModel.swift */; };
 		18A2ABC41D9802E000E4602B /* XCWelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2ABC31D9802E000E4602B /* XCWelcomeController.swift */; };
 		18A2ABD81D98DBD900E4602B /* XCStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A2ABD71D98DBD900E4602B /* XCStatus.swift */; };
+		18CC2F7A1D9C1C7F007F06BA /* XCRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CC2F791D9C1C7F007F06BA /* XCRefreshControl.swift */; };
+		18EE4E151DAB40AF00E905F9 /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EE4E141DAB40AF00E905F9 /* NSString+Emoji.m */; };
+		18EE4E171DAB773000E905F9 /* XCEmotionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE4E161DAB773000E905F9 /* XCEmotionButton.swift */; };
+		18EE4E191DAB927600E905F9 /* XCEmotionPopoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE4E181DAB927600E905F9 /* XCEmotionPopoView.swift */; };
+		18EE4E1B1DADF4F800E905F9 /* XCTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE4E1A1DADF4F800E905F9 /* XCTextAttachment.swift */; };
+		18EE4E1D1DADF70700E905F9 /* XCEmotionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE4E1C1DADF70700E905F9 /* XCEmotionTextView.swift */; };
+		18EE4E211DAE39F500E905F9 /* XCTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EE4E201DAE39F500E905F9 /* XCTempViewController.swift */; };
 		18FC12201D94CCE10097D268 /* XCLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC121F1D94CCE10097D268 /* XCLoginView.swift */; };
 		18FC12221D94D80E0097D268 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC12211D94D80E0097D268 /* UILabel+Extension.swift */; };
 		18FC12241D94D8740097D268 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FC12231D94D8740097D268 /* UIButton+Extension.swift */; };
@@ -44,6 +68,20 @@
 		180469181D9411FD00B1CEFE /* XCSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCSearchView.swift; sourceTree = "<group>"; };
 		1804691A1D9412FD00B1CEFE /* XCSearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCSearchView.xib; sourceTree = "<group>"; };
 		1804691C1D94288900B1CEFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1806EE2B1DA669BF00A26D7C /* XCComposeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCComposeView.swift; sourceTree = "<group>"; };
+		1806EE2D1DA673DE00A26D7C /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		1806EE301DA67C6400A26D7C /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		1806EE311DA67C6400A26D7C /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		1806EE331DA67CEC00A26D7C /* Blog-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blog-Bridge.h"; sourceTree = "<group>"; };
+		1806EE341DA68C7300A26D7C /* XCComposeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCComposeButton.swift; sourceTree = "<group>"; };
+		1806EE371DA6AD6600A26D7C /* XCComposeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCComposeController.swift; sourceTree = "<group>"; };
+		1806EE3A1DA7C03500A26D7C /* XCPicSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCPicSelectViewController.swift; sourceTree = "<group>"; };
+		1806EE3C1DA9C79000A26D7C /* XCEmoticonKeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCEmoticonKeyboardView.swift; sourceTree = "<group>"; };
+		1806EE3E1DA9D01D00A26D7C /* XCEmotionToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCEmotionToolBar.swift; sourceTree = "<group>"; };
+		1806EE401DA9E61100A26D7C /* XCEmotionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCEmotionCell.swift; sourceTree = "<group>"; };
+		1806EE431DA9F60900A26D7C /* XCEmotionTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCEmotionTools.swift; sourceTree = "<group>"; };
+		1806EE451DA9F61800A26D7C /* XCEmotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCEmotion.swift; sourceTree = "<group>"; };
+		1806EE471DA9F6D600A26D7C /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 		1830405D1D92E55400EA22A7 /* Blog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1830406C1D92E55400EA22A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		183040751D92E5F200EA22A7 /* XCDiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCDiscoverController.swift; sourceTree = "<group>"; };
@@ -54,6 +92,11 @@
 		183040891D92E5F200EA22A7 /* XCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XCTabBarController.swift; path = ../../Other/XCTabBarController.swift; sourceTree = "<group>"; };
 		1863AEBD1D99177D00F79F5A /* XCStatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCStatusViewModel.swift; sourceTree = "<group>"; };
 		1863AEBF1D99181200F79F5A /* XCHomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCHomeViewModel.swift; sourceTree = "<group>"; };
+		1863AEC11D994B2400F79F5A /* XCUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCUser.swift; sourceTree = "<group>"; };
+		1863AEC31D994CCC00F79F5A /* XCStatusPictureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCStatusPictureInfo.swift; sourceTree = "<group>"; };
+		1863AEC51D99522400F79F5A /* XCStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCStatusCell.swift; sourceTree = "<group>"; };
+		1863AEC71D995AAE00F79F5A /* XCPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCPictureView.swift; sourceTree = "<group>"; };
+		1863AEC91D9B723200F79F5A /* XCToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCToolBarView.swift; sourceTree = "<group>"; };
 		18A2ABB71D97896500E4602B /* XCOAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCOAuthController.swift; sourceTree = "<group>"; };
 		18A2ABB91D97912F00E4602B /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		18A2ABBB1D97B63300E4602B /* XCNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCNetworkTools.swift; sourceTree = "<group>"; };
@@ -61,6 +104,14 @@
 		18A2ABC11D97F30600E4602B /* XCUserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCUserAccountViewModel.swift; sourceTree = "<group>"; };
 		18A2ABC31D9802E000E4602B /* XCWelcomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCWelcomeController.swift; sourceTree = "<group>"; };
 		18A2ABD71D98DBD900E4602B /* XCStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCStatus.swift; sourceTree = "<group>"; };
+		18CC2F791D9C1C7F007F06BA /* XCRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCRefreshControl.swift; sourceTree = "<group>"; };
+		18EE4E131DAB40AF00E905F9 /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		18EE4E141DAB40AF00E905F9 /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
+		18EE4E161DAB773000E905F9 /* XCEmotionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCEmotionButton.swift; sourceTree = "<group>"; };
+		18EE4E181DAB927600E905F9 /* XCEmotionPopoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCEmotionPopoView.swift; sourceTree = "<group>"; };
+		18EE4E1A1DADF4F800E905F9 /* XCTextAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTextAttachment.swift; sourceTree = "<group>"; };
+		18EE4E1C1DADF70700E905F9 /* XCEmotionTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCEmotionTextView.swift; sourceTree = "<group>"; };
+		18EE4E201DAE39F500E905F9 /* XCTempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTempViewController.swift; sourceTree = "<group>"; };
 		18FC121F1D94CCE10097D268 /* XCLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCLoginView.swift; sourceTree = "<group>"; };
 		18FC12211D94D80E0097D268 /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		18FC12231D94D8740097D268 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
@@ -125,8 +176,63 @@
 				180469121D94036400B1CEFE /* UIBarButtonItem+Extension.swift */,
 				18FC12211D94D80E0097D268 /* UILabel+Extension.swift */,
 				18FC12231D94D8740097D268 /* UIButton+Extension.swift */,
+				1806EE2D1DA673DE00A26D7C /* UIImage+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		1806EE291DA6696700A26D7C /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				1806EE421DA9F5E400A26D7C /* Model */,
+				1806EE361DA6AD2A00A26D7C /* Controller */,
+				1806EE2A1DA6699700A26D7C /* View */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		1806EE2A1DA6699700A26D7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1806EE2B1DA669BF00A26D7C /* XCComposeView.swift */,
+				1806EE341DA68C7300A26D7C /* XCComposeButton.swift */,
+				1806EE3C1DA9C79000A26D7C /* XCEmoticonKeyboardView.swift */,
+				1806EE401DA9E61100A26D7C /* XCEmotionCell.swift */,
+				1806EE3E1DA9D01D00A26D7C /* XCEmotionToolBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1806EE2F1DA67C6400A26D7C /* UIImage+Effects */ = {
+			isa = PBXGroup;
+			children = (
+				1806EE301DA67C6400A26D7C /* UIImage+ImageEffects.h */,
+				1806EE311DA67C6400A26D7C /* UIImage+ImageEffects.m */,
+			);
+			path = "UIImage+Effects";
+			sourceTree = "<group>";
+		};
+		1806EE361DA6AD2A00A26D7C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1806EE371DA6AD6600A26D7C /* XCComposeController.swift */,
+				1806EE3A1DA7C03500A26D7C /* XCPicSelectViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1806EE421DA9F5E400A26D7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1806EE471DA9F6D600A26D7C /* Emoticons.bundle */,
+				1806EE431DA9F60900A26D7C /* XCEmotionTools.swift */,
+				1806EE451DA9F61800A26D7C /* XCEmotion.swift */,
+				18EE4E161DAB773000E905F9 /* XCEmotionButton.swift */,
+				18EE4E181DAB927600E905F9 /* XCEmotionPopoView.swift */,
+				18EE4E1A1DADF4F800E905F9 /* XCTextAttachment.swift */,
+				18EE4E1C1DADF70700E905F9 /* XCEmotionTextView.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		183040541D92E55400EA22A7 = {
@@ -159,6 +265,7 @@
 		183040721D92E5F200EA22A7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1806EE291DA6696700A26D7C /* Compose */,
 				18A2ABB51D9788EC00E4602B /* OAuth */,
 				180469091D93EFD100B1CEFE /* Main */,
 				183040781D92E5F200EA22A7 /* Home */,
@@ -227,6 +334,8 @@
 			isa = PBXGroup;
 			children = (
 				18A2ABD71D98DBD900E4602B /* XCStatus.swift */,
+				1863AEC11D994B2400F79F5A /* XCUser.swift */,
+				1863AEC31D994CCC00F79F5A /* XCStatusPictureInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +345,10 @@
 			children = (
 				1863AEBD1D99177D00F79F5A /* XCStatusViewModel.swift */,
 				1863AEBF1D99181200F79F5A /* XCHomeViewModel.swift */,
+				1863AEC51D99522400F79F5A /* XCStatusCell.swift */,
+				1863AEC71D995AAE00F79F5A /* XCPictureView.swift */,
+				1863AEC91D9B723200F79F5A /* XCToolBarView.swift */,
+				18CC2F791D9C1C7F007F06BA /* XCRefreshControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				183040881D92E5F200EA22A7 /* AppDelegate.swift */,
+				18EE4E201DAE39F500E905F9 /* XCTempViewController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -315,6 +429,8 @@
 		1830408A1D92E5F200EA22A7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1806EE2F1DA67C6400A26D7C /* UIImage+Effects */,
+				18EE4E121DAB40AF00E905F9 /* NSStringEmoji */,
 				1804690F1D93FFB500B1CEFE /* Extension */,
 				18A2ABB91D97912F00E4602B /* Common.swift */,
 				18A2ABBB1D97B63300E4602B /* XCNetworkTools.swift */,
@@ -327,6 +443,7 @@
 			children = (
 				1804691C1D94288900B1CEFE /* Assets.xcassets */,
 				1830406C1D92E55400EA22A7 /* Info.plist */,
+				1806EE331DA67CEC00A26D7C /* Blog-Bridge.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -364,6 +481,15 @@
 				18A2ABC11D97F30600E4602B /* XCUserAccountViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		18EE4E121DAB40AF00E905F9 /* NSStringEmoji */ = {
+			isa = PBXGroup;
+			children = (
+				18EE4E131DAB40AF00E905F9 /* NSString+Emoji.h */,
+				18EE4E141DAB40AF00E905F9 /* NSString+Emoji.m */,
+			);
+			path = NSStringEmoji;
 			sourceTree = "<group>";
 		};
 		7EA8536320C6901FA6244843 /* Frameworks */ = {
@@ -449,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1804691D1D94288900B1CEFE /* Assets.xcassets in Resources */,
+				1806EE481DA9F6D600A26D7C /* Emoticons.bundle in Resources */,
 				1804691B1D9412FD00B1CEFE /* XCSearchView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,30 +635,53 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1806EE3B1DA7C03500A26D7C /* XCPicSelectViewController.swift in Sources */,
 				18A2ABBA1D97912F00E4602B /* Common.swift in Sources */,
 				183040911D92E5F200EA22A7 /* XCMeController.swift in Sources */,
+				1863AEC21D994B2400F79F5A /* XCUser.swift in Sources */,
+				18EE4E171DAB773000E905F9 /* XCEmotionButton.swift in Sources */,
+				18EE4E191DAB927600E905F9 /* XCEmotionPopoView.swift in Sources */,
 				180469191D9411FD00B1CEFE /* XCSearchView.swift in Sources */,
 				18A2ABB81D97896500E4602B /* XCOAuthController.swift in Sources */,
 				1830408F1D92E5F200EA22A7 /* XCDiscoverController.swift in Sources */,
 				18FC12261D94EB6B0097D268 /* XCBaseController.swift in Sources */,
 				180469111D93FFF700B1CEFE /* UIView+Extension.swift in Sources */,
+				1863AEC81D995AAE00F79F5A /* XCPictureView.swift in Sources */,
 				183040921D92E5F200EA22A7 /* XCMsgController.swift in Sources */,
 				1863AEC01D99181200F79F5A /* XCHomeViewModel.swift in Sources */,
 				183040931D92E5F200EA22A7 /* AppDelegate.swift in Sources */,
 				183040941D92E5F200EA22A7 /* XCTabBarController.swift in Sources */,
+				1863AECA1D9B723200F79F5A /* XCToolBarView.swift in Sources */,
+				18CC2F7A1D9C1C7F007F06BA /* XCRefreshControl.swift in Sources */,
+				18EE4E211DAE39F500E905F9 /* XCTempViewController.swift in Sources */,
 				180469151D94095200B1CEFE /* XCNavigationController.swift in Sources */,
+				1806EE381DA6AD6600A26D7C /* XCComposeController.swift in Sources */,
+				1863AEC61D99522400F79F5A /* XCStatusCell.swift in Sources */,
+				1806EE2C1DA669BF00A26D7C /* XCComposeView.swift in Sources */,
+				1806EE411DA9E61100A26D7C /* XCEmotionCell.swift in Sources */,
 				1804690D1D93F16C00B1CEFE /* XCTabBar.swift in Sources */,
 				180469131D94036400B1CEFE /* UIBarButtonItem+Extension.swift in Sources */,
+				1863AEC41D994CCC00F79F5A /* XCStatusPictureInfo.swift in Sources */,
 				18A2ABBF1D97E7C000E4602B /* XCUserAccount.swift in Sources */,
+				1806EE461DA9F61800A26D7C /* XCEmotion.swift in Sources */,
 				18A2ABD81D98DBD900E4602B /* XCStatus.swift in Sources */,
 				1863AEBE1D99177D00F79F5A /* XCStatusViewModel.swift in Sources */,
 				183040901D92E5F200EA22A7 /* XCHomeController.swift in Sources */,
 				18FC12221D94D80E0097D268 /* UILabel+Extension.swift in Sources */,
+				18EE4E151DAB40AF00E905F9 /* NSString+Emoji.m in Sources */,
+				1806EE321DA67C6400A26D7C /* UIImage+ImageEffects.m in Sources */,
+				18EE4E1D1DADF70700E905F9 /* XCEmotionTextView.swift in Sources */,
+				1806EE441DA9F60900A26D7C /* XCEmotionTools.swift in Sources */,
+				1806EE3D1DA9C79000A26D7C /* XCEmoticonKeyboardView.swift in Sources */,
 				18A2ABBC1D97B63300E4602B /* XCNetworkTools.swift in Sources */,
+				1806EE2E1DA673DE00A26D7C /* UIImage+Extension.swift in Sources */,
 				18A2ABC41D9802E000E4602B /* XCWelcomeController.swift in Sources */,
 				18FC12201D94CCE10097D268 /* XCLoginView.swift in Sources */,
+				1806EE3F1DA9D01D00A26D7C /* XCEmotionToolBar.swift in Sources */,
 				18A2ABC21D97F30600E4602B /* XCUserAccountViewModel.swift in Sources */,
 				18FC12241D94D8740097D268 /* UIButton+Extension.swift in Sources */,
+				1806EE351DA68C7300A26D7C /* XCComposeButton.swift in Sources */,
+				18EE4E1B1DADF4F800E905F9 /* XCTextAttachment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +794,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.william.Blog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Blog/Supporting Files/Blog-Bridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -663,6 +814,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.william.Blog;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Blog/Supporting Files/Blog-Bridge.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

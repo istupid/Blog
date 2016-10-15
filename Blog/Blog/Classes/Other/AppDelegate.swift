@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        registerNotification() // 监听
+        
         // 实例化一个窗口
         window = UIWindow()
         
@@ -25,12 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 设置主窗口
 //        window?.rootViewController = XCTabBarController()
 //        window?.rootViewController = XCWelcomeController()
+        
+        let compose = XCComposeController ()
+        let nav = UINavigationController(rootViewController: compose)
+        
         window?.rootViewController = XCUserAccountViewModel.sharedAccountViewModel.userLogin ? XCWelcomeController() : XCTabBarController()
         
         // 窗口设置为主窗口，并显示
         window?.makeKeyAndVisible()
-        
-        registerNotification() // 监听
         
         return true
     }
